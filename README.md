@@ -3,7 +3,7 @@
 
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/heitorr.lt/)
 
-![Heitor GitHub stats](https://github-readme-stats.vercel.app/api?username=HeitorLeite&show_icons=true&theme=dark)
+![Heitor GitHub stats](https://github-readme-stats.vercel.app/api?username=HeitorLeite&show_icons=true&theme=transparent)
 
 ## Tecnologias que eu uso
 
