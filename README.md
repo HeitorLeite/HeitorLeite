@@ -14,6 +14,6 @@
 <img align="center" alt="Python" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white">
 </div><br/>
 
-![Heitor Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HeitorLeite&langs_count=8)
+![Heitor Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HeitorLeite&langs_count=7)
 
 Estou me aprimorando em aplicações relacionadas a desenvolvimento de softwares.
