@@ -3,7 +3,7 @@
 
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/heitorr.lt/)
 
-![Heitor GitHub stats](https://github-readme-stats.vercel.app/api?username=HeitorLeite&show_icons=true&theme=dark)
+![Heitor GitHub stats](https://github-readme-stats.vercel.app/api?username=HeitorLeite&show_icons=true&theme=transparent)
 
 ## Tecnologias que eu uso
 
@@ -11,9 +11,8 @@
 <img align="center" alt="C#" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white">
 <img align="center" alt="C" src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
 <img align="center" alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
-<img align="center" alt="Python" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white">
 </div><br/>
 
-![Heitor Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HeitorLeite&langs_count=7)
+![Heitor Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HeitorLeite&langs_count=8)
 
 Estou me aprimorando em aplicações relacionadas a desenvolvimento de softwares.
