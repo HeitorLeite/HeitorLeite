@@ -10,6 +10,14 @@
 
 ###
 
+<h4 align="left">Eu sou o Heitor, estudo Análise e Desenvolvimento de Sistemas na FATEC de Guaratinguetá. Estou me aprimorando na programação Full-Stack, atualmente estou fazendo projetos freelance de sites.</h4>
+
+###
+
+<h1 align="center">💻Linguagens que eu trabalho</h1>
+
+###
+
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="60" alt="html5 logo"  />
   <img width="12" />
@@ -33,13 +41,5 @@
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=HeitorLeite&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
 </div>
-
-###
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HeitorLeite/HeitorLeite/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HeitorLeite/HeitorLeite/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/HeitorLeite/HeitorLeite/output/pacman-contribution-graph.svg">
-</picture>
 
 ###
