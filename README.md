@@ -13,7 +13,7 @@
 
 ###
 
-<h4 align="left">Eu sou o Heitor, estudo Análise e Desenvolvimento de Sistemas na FATEC de Guaratinguetá. Estou me aprimorando na programação Full-Stack, atualmente estou fazendo projetos freelance de sites.</h4>
+<h4 align="left">Eu sou o Heitor, estudo Análise e Desenvolvimento de Sistemas na FATEC de Guaratinguetá. Estou me aprimorando na programação Full-Stack, atualmente faço projetos pessoais e estágio na UNIMED Lorena como TI.</h4>
 
 ###
 
