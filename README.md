@@ -5,7 +5,9 @@
 ```diff
 @@A Technology lover@@
 
-# Hey! I'm Heitor, I study Systems Analysis and Development at FATEC in Guaratinguetá. I'm improving my Full-Stack programming skills, mainly in Java Angular, and currently I'm working on personal projects and interning at UNIMED Lorena in IT.
+# Hey! I'm Heitor, I study Systems Analysis and Development at FATEC in Guaratinguetá.
+  I'm improving my Full-Stack programming skills, mainly in Java Angular, and currently
+  I'm working on personal projects and interning at UNIMED Lorena in IT.
 
 + Living in Guaratinguetá, Brazil!!
 - 19 years old
