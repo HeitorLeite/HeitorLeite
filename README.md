@@ -2,12 +2,12 @@
 
 ###
 
-<p align="left">Hey! I'm Heitor, I study Systems Analysis and Development at FATEC in Guaratinguetá. I'm improving my Full-Stack programming skills, mainly in Java Angular, and currently I'm working on personal projects and interning at UNIMED Lorena in IT.</p>
-
 ```diff
 @@A Technology lover@@
 
-+ Living in Guaratinguetá Brazil!!
+# Hey! I'm Heitor, I study Systems Analysis and Development at FATEC in Guaratinguetá. I'm improving my Full-Stack programming skills, mainly in Java Angular, and currently I'm working on personal projects and interning at UNIMED Lorena in IT.
+
++ Living in Guaratinguetá, Brazil!!
 - 19 years old
 ! Java and Angular programmer and always studying some technology
 ```
