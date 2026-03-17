@@ -1,4 +1,4 @@
-<h3 align="left">About:</h3>
+<h3 align="left">About 🧐:</h3>
 
 ###
 
@@ -14,13 +14,7 @@
 
 ###
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=HeitorLeite&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=6&theme=dark&hide_border=true&order=2&custom_title=Languages" height="150" alt="languages graph"  />
-</div>
-
-###
-
-<h3 align="left">My Tools:</h3>
+<h3 align="left">My Tools 💻:</h3>
 
 ###
 
@@ -80,6 +74,9 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/HeitorLeite/HeitorLeite/output/snake.svg" alt="Snake animation" />
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=HeitorLeite&hide_title=true&hide_rank=true&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dark&locale=en&hide_border=true&order=1" height="147" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=HeitorLeite&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=6&theme=dark&hide_border=true&order=2&custom_title=Languages" height="150" alt="languages graph"  />
+</div>
 
 ###
