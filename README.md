@@ -156,7 +156,7 @@ For an academic project, I led a team developing software to control a robotic a
 
 <div align="center">
 
-<img width="490" src="https://github-readme-stats.vercel.app/api?username=HeitorLeite&show_icons=true&hide_rank=true&hide_border=true&bg_color=F2F7F2&title_color=284D3D&text_color=456452&icon_color=70A583&border_radius=16" alt="Estatísticas públicas do GitHub de HeitorLeite" />
+<img width="490" src="https://raw.githubusercontent.com/HeitorLeite/HeitorLeite/main/assets/github-stats.svg" alt="Estatísticas públicas do GitHub de HeitorLeite" />
 
 </div>
 
@@ -164,7 +164,7 @@ For an academic project, I led a team developing software to control a robotic a
 
 <div align="center">
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=HeitorLeite&bg_color=F2F7F2&color=456452&line=70A583&point=284D3D&area=true&area_color=B8D8BE&hide_border=true&radius=16&custom_title=HeitorLeite%20%7C%20Contribution%20Activity" alt="Gráfico de atividade recente de HeitorLeite no GitHub" />
+<img width="100%" src="https://raw.githubusercontent.com/HeitorLeite/HeitorLeite/main/assets/activity-graph.svg" alt="Gráfico de atividade recente de HeitorLeite no GitHub" />
 
 </div>
 
