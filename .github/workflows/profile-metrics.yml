@@ -1,0 +1,65 @@
+name: Update profile metrics
+on:
+  schedule:
+    - cron: "41 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/profile-metrics.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: profile-metrics
+  cancel-in-progress: false
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate stats and activity SVGs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const data = await github.graphql(`query($login:String!){user(login:$login){contributionsCollection{totalCommitContributions totalIssueContributions totalPullRequestContributions contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}`, {login: 'HeitorLeite'});
+            const c = data.user.contributionsCollection;
+            const days = c.contributionCalendar.weeks.flatMap(w => w.contributionDays).filter(d => d.date <= new Date().toISOString().slice(0,10)).slice(-31);
+            const repos = await github.paginate(github.rest.repos.listForUser, {username:'HeitorLeite',type:'owner',per_page:100});
+            const stars = repos.reduce((n,r)=>n+r.stargazers_count,0);
+            const escape = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+            const text = (x,y,s,size=16,color='#456452') => `<text x="${x}" y="${y}" font-family="Arial,sans-serif" font-size="${size}" fill="${color}">${escape(s)}</text>`;
+            const wrap = (w,h,body) => `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img"><rect width="100%" height="100%" rx="16" fill="#F2F7F2"/>${body}</svg>`;
+            const rows = [
+             ['Contribuições / Contributions', c.contributionCalendar.totalContributions],
+             ['Commits', c.totalCommitContributions],
+             ['Pull requests', c.totalPullRequestContributions],
+             ['Issues', c.totalIssueContributions],
+             ['Repositórios públicos / Public repos', repos.length],
+             ['Estrelas recebidas / Stars received', stars]
+            ];
+            let stats = text(28,38,'HeitorLeite · GitHub Stats',23,'#284D3D') + text(28,65,'Contribuições: últimos 12 meses · Repositórios e estrelas: totais',12);
+            rows.forEach((r,i)=> {stats += text(28,103+i*32,r[0],15)+text(505,103+i*32,r[1],19,'#284D3D');});
+            stats += text(28,310,'Atualizado / Updated: '+new Date().toISOString().slice(0,10),12);
+            fs.mkdirSync('assets',{recursive:true});
+            fs.writeFileSync('assets/github-stats.svg',wrap(580,335,stats));
+            const max = Math.max(1,...days.map(d=>d.contributionCount));
+            const px = i => 58 + i* (770/Math.max(1,days.length-1));
+            const py = v => 230-v/max*140;
+            let graph = text(28,38,'Atividade · Activity',23,'#284D3D')+text(28,64,'Contribuições por dia · Daily contributions · Últimos 31 dias',14);
+            for(let i=0;i<=4;i++){const val=max*i/4;const y=py(val); graph += `<line x1="58" y1="${y}" x2="828" y2="${y}" stroke="#DCEFE2"/>`+text(18,y+4,Number(val.toFixed(1)),11);}
+            const pts = days.map((d,i)=>px(i)+','+py(d.contributionCount)).join(' ');
+            graph += `<polygon points="58,230 ${pts} 828,230" fill="#B8D8BE" opacity=".45"/><polyline points="${pts}" fill="none" stroke="#70A583" stroke-width="3"/>`;
+            days.forEach((d,i)=>{graph += `<circle cx="${px(i)}" cy="${py(d.contributionCount)}" r="3" fill="#284D3D"><title>${d.date}: ${d.contributionCount}</title></circle>`;if(i%7===0||i===days.length-1)graph+=text(px(i)-15,253,d.date.slice(5),11);});
+            graph+=text(28,286,'Fonte / Source: GitHub contribution calendar',12);
+            fs.writeFileSync('assets/activity-graph.svg',wrap(870,310,graph));
+      - name: Save metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg assets/activity-graph.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh profile metrics"
+            git pull --rebase
+            git push
+          fi
